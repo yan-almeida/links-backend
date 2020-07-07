@@ -1,6 +1,11 @@
 const express = require('express');
 
+const authController = require('./controllers/auth');
+
 const app = express();
+
+// /auth/sign-in
+app.use('/auth', authController);
 
 // request & response
 app.get('/', (req, res) => {

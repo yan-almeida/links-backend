@@ -4,12 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "port": "node src/index.js"
+        "start": "nodemon src/index.js",
+        "setup": "npm i --save express nodemon"
     },
     "keywords": [],
     "author": "Yan Almeida Garcia",
     "license": "MIT",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4"
     }
 }
