@@ -1,0 +1,15 @@
+{
+    "name": "links-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "port": "node src/index.js"
+    },
+    "keywords": [],
+    "author": "Yan Almeida Garcia",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
