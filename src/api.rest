@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3001
+
+@contentType = application/json
+
+
+
+
+### Criando uma nova conta
+GET {{baseUrl}}/auth/sign-up
+Content-Type: {{contentType}}
+
+{
+    "email": "yan@almeida.com",
+    "senha": "123"
+}
+
+
