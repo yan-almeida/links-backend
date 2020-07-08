@@ -13,16 +13,15 @@ router.get('/sign-in', (req, res) => {
 
 router.get('/sign-up', async(req, res) => {
 
-    const email = 'yan@almeida.com';
-    const senha = '123';
+    const { email, senha } = req.body;
 
-    const hash = bcrypt.hashSync(senha, saltRounds);
-    console.log(hash);
+
 
     // retornando uma promisse
-    const result = await Account.create({ email, senha: hash });
+    const hash = bcrypt.hashSync(senha, saltRounds);
+    // const result = await Account.create({ email, senha: hash });
 
-    return res.json(result);
+    return res.json({ email, senha: hash });
 });
 
 /* @export a const router */
