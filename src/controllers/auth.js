@@ -12,16 +12,16 @@ router.get('/sign-in', (req, res) => {
 });
 
 router.get('/sign-up', async(req, res) => {
-
     const { email, senha } = req.body;
 
-
+    const account = await Account.findOne({ where: { email } });
+    if (account) return res.json('Email já cadastrado');
 
     // retornando uma promisse
     const hash = bcrypt.hashSync(senha, saltRounds);
-    // const result = await Account.create({ email, senha: hash });
+    const newAccount = await Account.create({ email, senha: hash });
 
-    return res.json({ email, senha: hash });
+    return res.json(newAccount);
 });
 
 /* @export a const router */
