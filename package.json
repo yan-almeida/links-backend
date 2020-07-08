@@ -5,12 +5,13 @@
     "main": "index.js",
     "scripts": {
         "start": "nodemon src/index.js",
-        "setup": "npm i --save express nodemon sequelize dotenv mysql2"
+        "setup": "npm i --save express nodemon sequelize dotenv mysql2 bcrypt"
     },
     "keywords": [],
     "author": "Yan Almeida Garcia",
     "license": "MIT",
     "dependencies": {
+        "bcrypt": "^5.0.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mysql2": "^2.1.0",
