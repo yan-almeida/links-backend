@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        senha: {
+        password: {
             type: DataTypes.STRING,
             allowNull: false,
         }
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Account.prototype.toJSON = function() {
         const values = {...this.get() }; // this se refere ao Account
-        delete values.senha;
+        delete values.password;
 
         return values;
     }
