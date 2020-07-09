@@ -66,7 +66,7 @@ const jsonServerError = function(data, message, metadata) {
 };
 
 const response = (req, res, next) => {
-
+    // 1.26min
     res.jsonOK = jsonOK;
     res.jsonBadRequest = jsonBadRequest;
     res.jsonUnauthorized = jsonUnauthorized;
