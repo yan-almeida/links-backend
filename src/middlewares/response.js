@@ -76,6 +76,6 @@ const response = (req, res, next) => {
     res.jsonServerError = jsonServerError;
 
     next();
-}
+};
 
 module.exports = response;
