@@ -14,11 +14,9 @@ const checkJwt = (req, res, next) => {
     let token = req.headers['authorization'];
     token = token ? token.slice(7, token.length) : null;
 
-    if (!token) {
-        console.log('TOKEN: ', token)
-        return res.jsonUnauthorized(null, 'Invalid token - token');
-    }
-    // 1:21h
+    if (!token) return res.jsonUnauthorized(null, 'Invalid token - token');
+
+
     try {
         const decoded = verifyJwt(token);
         req.accountId = decoded.id;
