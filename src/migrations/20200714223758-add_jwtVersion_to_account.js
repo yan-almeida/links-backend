@@ -14,7 +14,6 @@ module.exports = {
             defaultValue: 0,
             after: 'password'
         });
-
     },
 
     down: async(queryInterface, Sequelize) => {

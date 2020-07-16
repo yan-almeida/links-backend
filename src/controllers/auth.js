@@ -64,6 +64,4 @@ router.post('/refresh', async(req, res) => {
 
 });
 
-// min - ep 2 
-/* @export a const router */
 module.exports = router;
